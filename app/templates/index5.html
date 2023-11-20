@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Online Food Delivery</title>
+	  <!--link css-->
+	      <link href="../static/css/stylee.css" type="text/css" rel="stylesheet"/>
+		  <link href="../static/css/bootstrap.css" type="text/css" rel="stylesheet"/>
+		  <link href="../static/css/bootstrap-grid.css" type="text/css" rel="stylesheet"/>
+		  <link href="../static/css/bootstrap-reboot.css" type="text/css" rel="stylesheet"/>
+		  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+		  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+		  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+		  
+		  
+		<!--link css-->
+    
+	</head>
+	
+	<body>
+	    <div class="container-fluid menubar">
+		  
+		   <div class="row">
+		     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+			    
+				  <li id="logo">
+				     <a href="index">
+					    <img src="../static/images/ofd.jpg" width=85px height=85px/>
+					  </a>
+					 
+				  </li>
+				
+				
+			  </div>
+			 
+			  
+			  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+			    <ul>
+					<li><a href="#"><i class="fa fa-search"></i>&nbsp Search</a></li>
+					<li><a href="#"><i class="fa fa-tag"></i>&nbsp Offers</a></li>
+					<li><a href="#"><i class="fa fa-support"></i>&nbsp Help</a></li>
+					{% if request.user.is_authenticated %}
+					<li><a href="{% url 'handlelogout' %}"><i class="fa fa-sign-out"></i>&nbsp Logout</a></li>
+					{% else  %}
+					 <li><a href="login"><i class="fa fa-user-o"></i>&nbsp Sign In</a></li>
+					{% endif %}
+					<li><a href="#"><i class="fa fa-cart-plus"></i>&nbsp Cart</a></li>
+				</ul>
+			  </div>
+		    </div> 
+		</div>
+		
+		
+		<div class="container2" data-flickity='{"wrapAround":true, "autoPlay":true, "pageDots":false}'>
+		 
+		   <li><a href="#"><img src="../static/images/1.jpg" height=260px width=350px/></a></li>
+	       <li><a href="#"><img src="../static/images/2.jpg" height=260px width=350px/></a></li>
+	       <li><a href="#"><img src="../static/images/3.jpg" height=260px width=350px/></a></li>
+	       <li><a href="#"><img src="../static/images/4.jpg" height=260px width=350px/></a></li>
+		   <li><a href="#"><img src="../static/images/5.jpg" height=260px width=350px/></a></li>
+		   <li><a href="#"><img src="../static/images/1.jpg" height=260px width=350px/></a></li>
+	       <li><a href="#"><img src="../static/images/2.jpg" height=260px width=350px/></a></li>
+	       <li><a href="#"><img src="../static/images/3.jpg" height=260px width=350px/></a></li>
+	       <li><a href="#"><img src="../static/images/4.jpg" height=260px width=350px/></a></li>
+		   <li><a href="#"><img src="../static/images/5.jpg" height=260px width=350px/></a></li>
+		   
+		 
+		</div>
+		
+		
+		<div class="container-fluid container3">
+		  
+		   <div class="row">
+		     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 col-xl-3">
+			    
+				  <li>
+				     <h2>16 restaurents</h2>
+				  </li>
+				
+				
+			  </div>
+			  
+			  <div class="col-xs-1 col-sm-7 col-md-5 col-lg-12 col-xl-8">
+			    <ul>
+				  <li><a href="index">Relevance</a></li>
+				  <li><a href="index2">Delivery Time</a></li>
+				  <li><a href="index3">Rating</a></li>
+				  <li><a href="index4">Cost:Low To High</a></li>
+				  <li><a href="index5">Cost:High To Low</a></li>
+				  <li class="filtr"><a href="#"><i class="fa fa-filter"></i><b>&nbspFilters</b></a></li>
+				  
+				</ul>
+			  </div>
+		     </div>
+		</div>
+		
+		<div class="container4">
+		  <div class="row1">
+		   <ul>
+		     <div class="section"><li><a href="#"><img src="../static/images/r5.jpg" height=165px width=300px/><h3>Sujata Family Restaurent</h3><p>Mughlai, Chinese, North Indian</p><i class="fa fa-star str">&nbsp 3.5</i>&nbsp &nbsp | &nbsp &nbsp43 MINS  &nbsp &nbsp | &nbsp &nbsp₹600 FOR TWO</a></li></div>
+	         <div class="section"><li><a href="#"><img src="../static/images/r10.jpg" height=165px width=300px/><h3>EXPRESS BY AB'S</h3><p>Biryani, North Indian, Chinese</p><i class="fa fa-star str">&nbsp 3.6</i>&nbsp &nbsp | &nbsp &nbsp42 MINS  &nbsp &nbsp | &nbsp &nbsp₹500 FOR TWO</a></li></div>
+		     <div class="section"><li><a href="#"><img src="../static/images/r2.jpg" height=165px width=300px/><h3>Ram Babu Restaurent</h3><p>Chinese, North Indian, Biryani</p><i class="fa fa-star str">&nbsp 3.4</i>&nbsp &nbsp | &nbsp &nbsp42 MINS  &nbsp &nbsp | &nbsp &nbsp₹300 FOR TWO</a></li></div>
+			 <div class="section"><li><a href="#"><img src="../static/images/r3.jpg" height=165px width=300px/><h3>Hungry Hope</h3><p>Indian, Chinese</p><i class="fa fa-star str">&nbsp 4.6</i>&nbsp &nbsp | &nbsp &nbsp42 MINS  &nbsp &nbsp | &nbsp &nbsp₹300 FOR TWO</a></li></div>
+		   </ul>
+		 </div>
+		 
+		  <div class="row2">
+		   <ul>
+		       <div class="section"><li><a href="#"><img src="../static/images/r13.jpg" height=165px width=300px/><h3>Banjara</h3><p>Chinese, Indian, South Indian</p><i class="fa fa-star str">&nbsp 4.7</i>&nbsp &nbsp | &nbsp &nbsp31 MINS  &nbsp &nbsp | &nbsp &nbsp₹300 FOR TWO</a></li></div>
+	           <div class="section"><li><a href="#"><img src="../static/images/r16.jpg" height=165px width=300px/><h3>Food Hut</h3><p>Indian, Chinese</p><i class="fa fa-star str">&nbsp 3.5</i>&nbsp &nbsp | &nbsp &nbsp38 MINS  &nbsp &nbsp | &nbsp &nbsp₹300 FOR TWO</a></li></div>
+		       <div class="section"><li><a href="#"><img src="../static/images/r4.jpg" height=165px width=300px/><h3>Rollacosta</h3><p>Indian, Chinese, Continental</p><i class="fa fa-star str">&nbsp 3.9</i>&nbsp &nbsp | &nbsp &nbsp44 MINS  &nbsp &nbsp | &nbsp &nbsp₹250 FOR TWO</a></li></div>
+	           <div class="section"><li><a href="#"><img src="../static/images/r11.jpg" height=165px width=300px/><h3>Palsons</h3><p>Bakery, Sweets</p><i class="fa fa-star str">&nbsp 3.5</i>&nbsp &nbsp | &nbsp &nbsp34 MINS  &nbsp &nbsp | &nbsp &nbsp₹250 FOR TWO</a></li></div>
+		   </ul>
+		 </div>
+		 
+		  <div class="row3">
+		   <ul>
+		      <div class="section"><li><a href="#"><img src="../static/images/r9.jpg" height=165px width=300px/><h3>Well Food</h3><p>Indian, Chinese, South Indian, Biryani</p><i class="fa fa-star str">&nbsp 3.5</i>&nbsp &nbsp | &nbsp &nbsp37 MINS  &nbsp &nbsp | &nbsp &nbsp₹250 FOR TWO</a></li></div>
+	          <div class="section"><li><a href="#"><img src="../static/images/r12.jpg" height=165px width=300px/><h3>Biryani Mahal</h3><p>Mughlai, Chinese</p><i class="fa fa-star str">&nbsp 3.6</i>&nbsp &nbsp | &nbsp &nbsp37 MINS  &nbsp &nbsp | &nbsp &nbsp₹250 FOR TWO</a></li></div>
+		      <div class="section"><li><a href="#"><img src="../static/images/r14.jpg" height=165px width=300px/><h3>Cake Palace</h3><p>Desserts, Bakery</p><i class="fa fa-star str">&nbsp 3.7</i>&nbsp &nbsp | &nbsp &nbsp32 MINS  &nbsp &nbsp | &nbsp &nbsp₹250 FOR TWO</a></li></div>
+			  <div class="section"><li><a href="#"><img src="../static/images/r15.jpg" height=165px width=300px/><h3>D-Zaprino</h3><p>Continental, Desserts, Beverage</p><i class="fa fa-star str">&nbsp 3.7</i>&nbsp &nbsp | &nbsp &nbsp41 MINS  &nbsp &nbsp | &nbsp &nbsp₹200 FOR TWO</a></li></div>
+			</ul>
+		 </div>
+		 
+		 <div class="row4">
+		   <ul>
+		      <div class="section"><li><a href="#"><img src="../static/images/r7.jpg" height=165px width=300px/><h3>Champaran Meat House-TM</h3><p>Biryani, Indian, Chinese</p><i class="fa fa-star str">&nbsp 3.6</i>&nbsp &nbsp | &nbsp &nbsp30 MINS  &nbsp &nbsp | &nbsp &nbsp₹200 FOR TWO</a></li></div>
+			  <div class="section"><li><a href="#"><img src="../static/images/r8.jpg" height=165px width=300px/><h3>HARILAL (Kankarbagh)</h3><p>Bakery, Sweets, Indian</p><i class="fa fa-star str">&nbsp 4.2</i>&nbsp &nbsp | &nbsp &nbsp42 MINS  &nbsp &nbsp | &nbsp &nbsp₹150 FOR TWO</a></li></div>
+		      <div class="section"><li><a href="#"><img src="../static/images/r6.jpg" height=165px width=300px/><h3>Dosa Station</h3><p>South Indian</p><i class="fa fa-star str">&nbsp 3.2</i>&nbsp &nbsp | &nbsp &nbsp36 MINS  &nbsp &nbsp | &nbsp &nbsp₹150 FOR TWO</a></li></div>
+			  <div class="section"><li><a href="#"><img src="../static/images/r1.jpg" height=165px width=300px/><h3>Kwality Walls Frozen Dessert</h3><p>Desserts, Ice Cream</p><i class="fa fa-star str">&nbsp 4.6</i>&nbsp &nbsp | &nbsp &nbsp31 MINS  &nbsp &nbsp | &nbsp &nbsp₹100 FOR TWO</a></li></div>
+	        	
+		    </ul>
+		 </div>
+	    </div>
+		
+		
+		<!-- contact section starts  -->
+
+    <section class="contact" id="contact">
+        <ul class="ct">
+
+            <div class="icons-container">
+
+             <div class="icons">
+               <i class="fas fa-map-marker-alt"></i>
+               <h3>address</h3>
+               <p>muzaffarpur, bihar, india - 842001</p>
+             </div>
+
+             <div class="icons">
+               <i class="fas fa-envelope"></i>
+              <h3>email</h3>
+              <p>iamsatyamnarayan@gmail.com</p>
+            </div>
+
+          <div class="icons">
+            <i class="fas fa-phone"></i>
+            <h3>phone</h3>
+            <p>+91 7645069427</p>
+          </div>
+
+         </div>
+
+         <div class="row">
+
+			<form action="{% url 'index' %}" method="post">
+				{% csrf_token %}
+				<h3>get in touch</h3>
+				<div class="inputBox">
+				   <input type="text" name="name" placeholder="your name">
+				   <input type="email" name="email" placeholder="your email">
+				</div>
+				 <div class="inputBox">
+					<input type="number" name="number" placeholder="your number">
+					<input type="text" name="subject" placeholder="your subject">
+				</div>
+				<textarea name="message" placeholder="your message" cols="30" rows="10"></textarea>
+				<input type="submit" value="send message" class="btnn">
+			   </form>
+
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57317.44419528973!2d85.35131731814157!3d26.120446419498112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed10e8a3175529%3A0x7c2d919680f759d!2sMuzaffarpur%2C%20Bihar!5e0!3m2!1sen!2sin!4v1652952419927!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+          </div>
+	    </ul>
+
+    </section>
+
+<!-- contact section ends -->
+
+
+<!-- footer section starts  -->
+
+    <section class="footer">
+      <ul class="ft">
+
+            <div class="box-container">
+
+                <div class="box">
+                  <h3>about us</h3>
+                  <p>Welcome to QuickBite,Your number one Online Food Delivery service provider.We're dedicated to giving you the best offers as well as fast delivery.</P>
+			      <p>&nbsp &nbsp &nbsp &nbsp by Satyam Narayan</p>
+                </div>
+
+
+                <div class="box">
+                  <h3>quick links</h3>
+                  <a href="#"> <i class="fas fa-arrow-right"></i> home </a>
+                  <a href="#"> <i class="fas fa-arrow-right"></i> products </a>
+                  <a href="#"> <i class="fas fa-arrow-right"></i> featured </a>
+                  <a href="#"> <i class="fas fa-arrow-right"></i> review </a>
+                  <a href="#"> <i class="fas fa-arrow-right"></i> contact us </a>
+                </div>
+ 
+                <div class="box">
+                  <h3>extra links</h3>
+                  <a href="#"> <i class="fas fa-arrow-right"></i> my order </a>
+                  <a href="#"> <i class="fas fa-arrow-right"></i> my account </a>
+                  <a href="#"> <i class="fas fa-arrow-right"></i> my listing </a>
+                  <a href="#"> <i class="fas fa-arrow-right"></i> sell now </a>
+                  <a href="#"> <i class="fas fa-arrow-right"></i> new offers </a>
+                </div>
+
+            </div>
+
+            <div class="share">
+              <a href="#" class="fab fa-facebook-f"></a>
+              <a href="#" class="fab fa-twitter"></a>
+              <a href="#" class="fab fa-pinterest"></a>
+              <a href="#" class="fab fa-linkedin"></a>
+              <a href="#" class="fab fa-instagram"></a>
+            </div>
+
+           <div class="credit"> &copy; copyright @ 2023 by <span>Satyam Narayan</span> </div>
+	
+	    </ul>
+    
+    </section>
+
+<!-- footer section ends -->
+
+	  
+				
+	
+
+	<!--link js-->
+	  <script type="javascript" src="js/custom.js"></script>
+	  <script type="javascript" src="js/bootstrap.bundle.js"></script>
+	  <script type="javascript" src="js/bootstrap.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+	  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+	<!--link js-->
+	<!-- custom js file link -->
+      <script src="../static/js/script.js"></script>
+	
+	
+	</body>
+
+</html>
